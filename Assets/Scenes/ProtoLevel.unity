@@ -4266,6 +4266,36 @@ PrefabInstance:
       propertyPath: GameObjects.Array.data[0]
       value: 
       objectReference: {fileID: 1981537339}
+    - target: {fileID: 195026, guid: 03842c285bc45c8469bb403524aebc5f, type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 164500, guid: 03842c285bc45c8469bb403524aebc5f, type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 116084, guid: 03842c285bc45c8469bb403524aebc5f, type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 181504, guid: 03842c285bc45c8469bb403524aebc5f, type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 176634, guid: 03842c285bc45c8469bb403524aebc5f, type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 11458158, guid: 03842c285bc45c8469bb403524aebc5f, type: 3}
+      propertyPath: m_Interactable
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 11464860, guid: 03842c285bc45c8469bb403524aebc5f, type: 3}
+      propertyPath: m_Text
+      value: 'Temporarily Disabled
+
+'
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 03842c285bc45c8469bb403524aebc5f, type: 3}
 --- !u!1 &1917607990
