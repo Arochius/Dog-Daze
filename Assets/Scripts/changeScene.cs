@@ -21,4 +21,8 @@ public class changeScene : MonoBehaviour
     {
         SceneManager.LoadScene("ProtoLevel");
     }
+    public void endGame()
+    {
+        Application.Quit();
+    }
 }

@@ -17,4 +17,7 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/Scenes/ProtoLevel.unity
     guid: 89995a11e35f1374aa040924b7ac935d
+  - enabled: 1
+    path: Assets/Scenes/EndGameScene.unity
+    guid: 9fc09dbf66f8b8f47ac64b926c87f5f8
   m_configObjects: {}
