@@ -38,7 +38,7 @@ RenderSettings:
   m_ReflectionIntensity: 1
   m_CustomReflection: {fileID: 0}
   m_Sun: {fileID: 0}
-  m_IndirectSpecularColor: {r: 0.44681156, g: 0.49668503, b: 0.57495755, a: 1}
+  m_IndirectSpecularColor: {r: 0.4468122, g: 0.4966858, b: 0.57495844, a: 1}
   m_UseRadianceAmbientProbe: 0
 --- !u!157 &3
 LightmapSettings:
@@ -1037,7 +1037,7 @@ GameObject:
   - component: {fileID: 1500970310}
   m_Layer: 0
   m_Name: beagleCube
-  m_TagString: Untagged
+  m_TagString: Dog
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -1055,6 +1055,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   selectLight: {fileID: 2130635856}
+  isSelected: 0
 --- !u!65 &1500970311
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -1144,7 +1145,7 @@ GameObject:
   - component: {fileID: 1519149618}
   m_Layer: 0
   m_Name: corgiCube
-  m_TagString: Untagged
+  m_TagString: Dog
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -1162,6 +1163,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   selectLight: {fileID: 445228327}
+  isSelected: 0
 --- !u!65 &1519149619
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -1251,7 +1253,7 @@ GameObject:
   - component: {fileID: 1596927478}
   m_Layer: 0
   m_Name: pugCube
-  m_TagString: Untagged
+  m_TagString: Dog
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -1269,6 +1271,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   selectLight: {fileID: 469035586}
+  isSelected: 0
 --- !u!65 &1596927479
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -1384,7 +1387,7 @@ GameObject:
   - component: {fileID: 1682917575}
   m_Layer: 0
   m_Name: frenchieCube
-  m_TagString: Untagged
+  m_TagString: Dog
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -1402,6 +1405,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   selectLight: {fileID: 190888341}
+  isSelected: 0
 --- !u!65 &1682917576
 BoxCollider:
   m_ObjectHideFlags: 0

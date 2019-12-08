@@ -6,6 +6,13 @@ using UnityEngine.SceneManagement;
 
 public class changeScene : MonoBehaviour
 {
+    public static string selectedDog;
+    GameObject[] doggos;
+
+    private void Start()
+    {
+        selectedDog = "";
+    }
 
     public void characterScene()
     {
@@ -19,6 +26,7 @@ public class changeScene : MonoBehaviour
  
     public void protomapScene()
     {
+        selectedDog = dogSelect.selected;
         SceneManager.LoadScene("ProtoLevel");
     }
     public void endGame()
