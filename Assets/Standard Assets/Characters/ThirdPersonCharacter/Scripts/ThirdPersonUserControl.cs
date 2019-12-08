@@ -42,7 +42,7 @@ namespace UnityStandardAssets.Characters.ThirdPerson
 
             if (!m_Piss)
             {
-                m_Piss = CrossPlatformInputManager.GetButtonDown("Fire1");
+                m_Piss = CrossPlatformInputManager.GetButtonDown("Piss");
             }
         }
 
