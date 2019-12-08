@@ -1,6 +1,7 @@
 ﻿using UnityEngine;
 using System.Collections;
 using UnityEngine.SceneManagement;
+using UnityStandardAssets.Characters.ThirdPerson;
 public class characterController : MonoBehaviour
 {
     public float speed = 6.0F;
@@ -28,6 +29,9 @@ public class characterController : MonoBehaviour
         }
 
         moveDirection.y -= gravity * Time.deltaTime;
+        if (ThirdPersonCharacter.isPissing)
+            speed = 0;
+        else speed = 6.0f;
         controller.Move(moveDirection * Time.deltaTime);
     }
 }

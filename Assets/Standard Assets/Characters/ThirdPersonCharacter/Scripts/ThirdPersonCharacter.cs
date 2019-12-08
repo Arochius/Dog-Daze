@@ -29,6 +29,8 @@ namespace UnityStandardAssets.Characters.ThirdPerson
 		CapsuleCollider m_Capsule;
 		bool m_Crouching;
 
+        public static bool isPissing;
+
 
 		void Start()
 		{
@@ -43,10 +45,11 @@ namespace UnityStandardAssets.Characters.ThirdPerson
 
             m_Animator.enabled = false;
             m_Animator.enabled = true;
+            isPissing = false;
 		}
 
 
-		public void Move(Vector3 move, bool crouch, bool jump)
+		public void Move(Vector3 move, bool crouch, bool jump, bool piss)
 		{
 
 			// convert the world relative moveInput vector into a local-relative
@@ -71,11 +74,21 @@ namespace UnityStandardAssets.Characters.ThirdPerson
 				HandleAirborneMovement();
 			}
 
-			ScaleCapsuleForCrouching(crouch);
+			ScaleCapsuleForCrouching(false);
 			PreventStandingInLowHeadroom();
 
-			// send input and other state parameters to the animator
-			UpdateAnimator(move);
+            if (piss && !isPissing)
+                StartPissing();
+            else
+            {
+                if (!isPissing)
+                {
+                    // send input and other state parameters to the animator
+                    UpdateAnimator(move);
+                }
+               
+            }
+            
 		}
 
 
@@ -94,7 +107,7 @@ namespace UnityStandardAssets.Characters.ThirdPerson
 				float crouchRayLength = m_CapsuleHeight - m_Capsule.radius * k_Half;
 				if (Physics.SphereCast(crouchRay, m_Capsule.radius * k_Half, crouchRayLength, Physics.AllLayers, QueryTriggerInteraction.Ignore))
 				{
-					m_Crouching = true;
+					//m_Crouching = true;
 					return;
 				}
 				m_Capsule.height = m_CapsuleHeight;
@@ -112,7 +125,7 @@ namespace UnityStandardAssets.Characters.ThirdPerson
 				float crouchRayLength = m_CapsuleHeight - m_Capsule.radius * k_Half;
 				if (Physics.SphereCast(crouchRay, m_Capsule.radius * k_Half, crouchRayLength, Physics.AllLayers, QueryTriggerInteraction.Ignore))
 				{
-					m_Crouching = true;
+					//m_Crouching = true;
 				}
 			}
 		}
@@ -120,9 +133,13 @@ namespace UnityStandardAssets.Characters.ThirdPerson
 
 		void UpdateAnimator(Vector3 move)
 		{
-			// update the animator parameters
-			m_Animator.SetFloat("Forward", m_ForwardAmount, 0.1f, Time.deltaTime);
-			m_Animator.SetFloat("Turn", m_TurnAmount, 0.1f, Time.deltaTime);
+            // update the animator parameters
+            if (!isPissing)
+            {
+                m_Animator.SetFloat("Forward", m_ForwardAmount, 0.1f, Time.deltaTime);
+                m_Animator.SetFloat("Turn", m_TurnAmount, 0.1f, Time.deltaTime);
+            }
+			
 			m_Animator.SetBool("Crouch", m_Crouching);
 			m_Animator.SetBool("OnGround", m_IsGrounded);
 			if (!m_IsGrounded)
@@ -183,7 +200,8 @@ namespace UnityStandardAssets.Characters.ThirdPerson
 		{
 			// help the character turn faster (this is in addition to root rotation in the animation)
 			float turnSpeed = Mathf.Lerp(m_StationaryTurnSpeed, m_MovingTurnSpeed, m_ForwardAmount);
-			transform.Rotate(0, m_TurnAmount * turnSpeed * Time.deltaTime, 0);
+            if(!isPissing)
+			    transform.Rotate(0, m_TurnAmount * turnSpeed * Time.deltaTime, 0);
 		}
 
 
@@ -224,5 +242,17 @@ namespace UnityStandardAssets.Characters.ThirdPerson
 				m_Animator.applyRootMotion = false;
 			}
 		}
+
+        void StartPissing()
+        {
+            isPissing = true;
+            m_Animator.SetTrigger("Piss");
+        }
+
+        void StopPissing()
+        {
+            isPissing = false;            
+        }
+
 	}
 }
