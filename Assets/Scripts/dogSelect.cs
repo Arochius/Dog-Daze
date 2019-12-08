@@ -7,10 +7,12 @@ using UnityEngine.SceneManagement;
 public class dogSelect : MonoBehaviour
 {
     public Light selectLight;
+    public static string selected;
     // Start is called before the first frame update
     void Start()
     {
         selectLight.enabled = false;
+        selected = "";
     }
 
     // Update is called once per frame
@@ -26,8 +28,8 @@ public class dogSelect : MonoBehaviour
     }
     void OnMouseDown()
     {
+        selected = this.gameObject.name;
         SceneManager.LoadScene("MapSelect");
-
     }
     void OnMouseExit()
     {
