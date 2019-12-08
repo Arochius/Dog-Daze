@@ -30,9 +30,10 @@ namespace UnityStandardAssets.Characters.ThirdPerson
 		bool m_Crouching;
 
         public static bool isPissing;
+        public static int pissCounter;
 
 
-		void Start()
+        void Start()
 		{
 			m_Animator = GetComponent<Animator>();
 			m_Rigidbody = GetComponent<Rigidbody>();
@@ -46,6 +47,7 @@ namespace UnityStandardAssets.Characters.ThirdPerson
             m_Animator.enabled = false;
             m_Animator.enabled = true;
             isPissing = false;
+            pissCounter = 0;
 		}
 
 
@@ -251,7 +253,8 @@ namespace UnityStandardAssets.Characters.ThirdPerson
 
         void StopPissing()
         {
-            isPissing = false;            
+            isPissing = false;
+            pissCounter++;
         }
 
 	}
