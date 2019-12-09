@@ -29,7 +29,7 @@ public class dogSelect : MonoBehaviour
     void OnMouseDown()
     {
         selected = this.gameObject.name;
-        SceneManager.LoadScene("MapSelect");
+        SceneManager.LoadScene("DifficultySelect");
     }
     void OnMouseExit()
     {
