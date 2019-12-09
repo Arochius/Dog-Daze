@@ -19,7 +19,7 @@ namespace UnityStandardAssets.Characters.ThirdPerson
 
 		Rigidbody m_Rigidbody;
 		Animator m_Animator;
-        public GameObject pissStream;
+        public ParticleSystem pissStream;
 		bool m_IsGrounded;
 		float m_OrigGroundCheckDistance;
 		const float k_Half = 0.5f;
@@ -249,20 +249,26 @@ namespace UnityStandardAssets.Characters.ThirdPerson
 			}
 		}
 
-        void StartPissing()
+        void Piss()
         {
             isPissing = true;
             m_Animator.SetTrigger("Piss");
         }
 
+        void StartPissing()
+        {
+            pissStream.Play();
+        }
+
         void toggleStream()
         {
-            pissStream.SetActive(!pissStream.activeSelf);
+            //pissStream.SetActive(!pissStream.activeSelf);
         }
 
         void StopPissing()
         {
             isPissing = false;
+            pissStream.Stop();
             pissCounter++;
             StartCoroutine("pissCooldown");
         }
