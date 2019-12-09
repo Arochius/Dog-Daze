@@ -84,7 +84,7 @@ namespace UnityStandardAssets.Characters.ThirdPerson
 			PreventStandingInLowHeadroom();
 
             if (piss && !isPissing &&canPiss)
-                StartPissing();
+                Piss();
             else
             {
                 if (!isPissing)
