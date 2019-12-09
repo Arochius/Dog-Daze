@@ -29,6 +29,7 @@ public class Score : MonoBehaviour
         if (score >= scoreToWin)
         {
             didWin = true;
+            score = 0;
             SceneManager.LoadScene("EndGameScene");
         }
     }
