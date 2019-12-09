@@ -8,7 +8,7 @@ using UnityStandardAssets.Characters.ThirdPerson;
 public class Score : MonoBehaviour
 {
     public static int score;
-    public int scoreToWin;
+    public static int scoreToWin;
     public Text scoreText;
     public static bool didWin;
 
@@ -17,6 +17,7 @@ public class Score : MonoBehaviour
     void Start()
     {
         score = 0;
+        scoreToWin = 5;
         didWin = false;
     }
 
