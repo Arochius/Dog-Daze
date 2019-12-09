@@ -7,6 +7,7 @@ using UnityEngine.SceneManagement;
 public class changeScene : MonoBehaviour
 {
     public static string selectedDog;
+    public static string selectedMap;
     GameObject[] doggos;
 
     private void Start()
@@ -23,14 +24,23 @@ public class changeScene : MonoBehaviour
     {
         SceneManager.LoadScene("TitleScreen");
     }
- 
-    public void protomapScene()
+
+    public void retry()
     {
         selectedDog = dogSelect.selected;
-        SceneManager.LoadScene("ProtoLevel");
+        SceneManager.LoadScene(selectedMap);
     }
+
+   
     public void endGame()
     {
         Application.Quit();
+    }
+
+    public void protomapScene()
+    {
+        selectedDog = dogSelect.selected;
+        selectedMap = "ProtoLevel";
+        SceneManager.LoadScene(selectedMap);
     }
 }
