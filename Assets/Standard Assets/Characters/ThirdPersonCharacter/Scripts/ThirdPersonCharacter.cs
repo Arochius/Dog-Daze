@@ -1,5 +1,6 @@
 using UnityEngine;
 using System.Collections;
+using UnityEngine.SceneManagement;
 
 namespace UnityStandardAssets.Characters.ThirdPerson
 {
@@ -282,5 +283,11 @@ namespace UnityStandardAssets.Characters.ThirdPerson
             yield return new WaitForSeconds(cooldown);
             canPiss = true;
         }
-	}
+
+        private void OnCollisionEnter(Collision collision)
+        {
+            if (collision.gameObject.tag == "Hooman")
+                SceneManager.LoadScene("EndGameScene");
+        }
+    }
 }
