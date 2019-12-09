@@ -40,7 +40,7 @@ public class changeScene : MonoBehaviour
     public void protomapScene()
     {
         selectedDog = dogSelect.selected;
-        selectedMap = "ProtoLevel";
+        selectedMap = "Level1";
         SceneManager.LoadScene(selectedMap);
     }
 }
