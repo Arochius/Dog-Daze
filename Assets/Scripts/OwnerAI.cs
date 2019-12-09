@@ -1,6 +1,7 @@
 ﻿using UnityEngine;
 using System.Collections;
 using UnityEngine.AI;
+using UnityEngine.SceneManagement;
 
 public class OwnerAI : MonoBehaviour
 {
@@ -126,9 +127,10 @@ public class OwnerAI : MonoBehaviour
 
     void OnCollisionEnter(Collision other)
     {
-        if (other.collider.gameObject.tag.Equals("Player"))
+        if (other.gameObject.tag.Equals("Player"))
         {
             audio.PlayOneShot(caughtSound);
+            SceneManager.LoadScene("EndGameScene");
             //anim.SetTrigger("Attack");
             //anim.SetBool("isAttacking", true);
             //anim.SetFloat("Speed", 0);
