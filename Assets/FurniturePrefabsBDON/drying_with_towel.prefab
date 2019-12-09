@@ -11,6 +11,7 @@ GameObject:
   - component: {fileID: 3114731099381639600}
   - component: {fileID: 3114731099385063830}
   - component: {fileID: 3114731099383933782}
+  - component: {fileID: 2881386352827501112}
   m_Layer: 0
   m_Name: towel
   m_TagString: Untagged
@@ -77,6 +78,20 @@ MeshRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 0
+--- !u!64 &2881386352827501112
+MeshCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3114731099382003088}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  serializedVersion: 3
+  m_Convex: 1
+  m_CookingOptions: 14
+  m_Mesh: {fileID: 4300002, guid: 8840620f7a7d1394f83c08d238fd9e10, type: 3}
 --- !u!1 &3114731099382003092
 GameObject:
   m_ObjectHideFlags: 0
@@ -120,6 +135,7 @@ GameObject:
   - component: {fileID: 3114731099381639606}
   - component: {fileID: 3114731099385063828}
   - component: {fileID: 3114731099383933780}
+  - component: {fileID: 2647227731282568794}
   m_Layer: 0
   m_Name: towel_dryer
   m_TagString: Untagged
@@ -186,3 +202,17 @@ MeshRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 0
+--- !u!64 &2647227731282568794
+MeshCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3114731099382003094}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  serializedVersion: 3
+  m_Convex: 1
+  m_CookingOptions: 14
+  m_Mesh: {fileID: 4300000, guid: 8840620f7a7d1394f83c08d238fd9e10, type: 3}

@@ -11,6 +11,7 @@ GameObject:
   - component: {fileID: 6367742293970992366}
   - component: {fileID: 6367742293971795150}
   - component: {fileID: 6367742293972762126}
+  - component: {fileID: 6457693847475606070}
   m_Layer: 0
   m_Name: rack_1
   m_TagString: Untagged
@@ -77,3 +78,16 @@ MeshRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 0
+--- !u!65 &6457693847475606070
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6367742293970559182}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Size: {x: 15.357105, y: 45.45063, z: 58.668114}
+  m_Center: {x: -0.00000023841858, y: -0.0000047683716, z: 29.210201}

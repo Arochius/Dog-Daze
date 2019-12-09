@@ -11,6 +11,7 @@ GameObject:
   - component: {fileID: 1828846000429903376}
   - component: {fileID: 1828846000432803376}
   - component: {fileID: 1828846000431803632}
+  - component: {fileID: 1633459613932626347}
   m_Layer: 0
   m_Name: flasket
   m_TagString: Untagged
@@ -77,3 +78,16 @@ MeshRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 0
+--- !u!65 &1633459613932626347
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1828846000429806128}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Size: {x: 20.763052, y: 25.659554, z: 35.604324}
+  m_Center: {x: 0.0000004768374, y: -0.000004189484, z: 17.571972}
