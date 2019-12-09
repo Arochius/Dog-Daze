@@ -4820,6 +4820,7 @@ MonoBehaviour:
   m_AnimSpeedMultiplier: 1
   m_GroundCheckDistance: 0.3
   pissStream: {fileID: 1847981804922691675}
+  cooldown: 15
 --- !u!114 &3910182761103241755
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -4832,8 +4833,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: f2f7719def984e843a50d871e6f889b2, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  speed: 6
-  jumpSpeed: 8
+  startSpeed: 10
+  jumpSpeed: 6
   gravity: 20
   dog: {fileID: 0}
 --- !u!143 &3910182761103241756

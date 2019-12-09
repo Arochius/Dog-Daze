@@ -4820,6 +4820,7 @@ MonoBehaviour:
   m_AnimSpeedMultiplier: 1
   m_GroundCheckDistance: 0.3
   pissStream: {fileID: 1469184377}
+  cooldown: 15
 --- !u!114 &721453656372014323
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -4832,7 +4833,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: f2f7719def984e843a50d871e6f889b2, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  speed: 6
+  startSpeed: 6
   jumpSpeed: 8
   gravity: 20
   dog: {fileID: 0}
@@ -5007,6 +5008,10 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 9593224, guid: 64e7daf2963f0ee47b81191941e60ea7, type: 3}
+      propertyPath: m_Avatar
+      value: 
+      objectReference: {fileID: 9000000, guid: e72eefbcf63b6474a865c7687adc37f3, type: 3}
     - target: {fileID: 421254, guid: 64e7daf2963f0ee47b81191941e60ea7, type: 3}
       propertyPath: m_LocalRotation.x
       value: -0.053683862
@@ -5031,10 +5036,6 @@ PrefabInstance:
       propertyPath: m_LocalPosition.y
       value: 0.25597247
       objectReference: {fileID: 0}
-    - target: {fileID: 9593224, guid: 64e7daf2963f0ee47b81191941e60ea7, type: 3}
-      propertyPath: m_Avatar
-      value: 
-      objectReference: {fileID: 9000000, guid: e72eefbcf63b6474a865c7687adc37f3, type: 3}
     - target: {fileID: 167826, guid: 64e7daf2963f0ee47b81191941e60ea7, type: 3}
       propertyPath: m_Layer
       value: 9

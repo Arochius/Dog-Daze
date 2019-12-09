@@ -1,14 +1,19 @@
-﻿using UnityEngine;
+using UnityEngine;
 using System.Collections;
 using UnityEngine.SceneManagement;
 using UnityStandardAssets.Characters.ThirdPerson;
 public class characterController : MonoBehaviour
 {
-    public float speed = 6.0F;
+    public float startSpeed;
+    float speed;
     public float jumpSpeed = 8.0F;
     public float gravity = 20.0F;
     public GameObject dog;
     private Vector3 moveDirection = Vector3.zero;
+    void Start()
+    {
+        speed = startSpeed;
+    }
     void Update()
     {
         
@@ -31,7 +36,7 @@ public class characterController : MonoBehaviour
         moveDirection.y -= gravity * Time.deltaTime;
         if (ThirdPersonCharacter.isPissing)
             speed = 0;
-        else speed = 6.0f;
+        else speed = startSpeed;
         controller.Move(moveDirection * Time.deltaTime);
     }
 }
