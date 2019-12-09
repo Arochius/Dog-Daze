@@ -17,7 +17,12 @@ public class Score : MonoBehaviour
     void Start()
     {
         score = 0;
-        scoreToWin = 5;
+        if (changeScene.difficulty == "easy")
+            scoreToWin = 4;
+        else if (changeScene.difficulty == "medium")
+            scoreToWin = 7;
+        else if (changeScene.difficulty == "hard")
+            scoreToWin = 10;
         didWin = false;
     }
 
