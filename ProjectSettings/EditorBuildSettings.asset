@@ -6,21 +6,21 @@ EditorBuildSettings:
   serializedVersion: 2
   m_Scenes:
   - enabled: 1
-    path: Assets/Scenes/TitleScreen.unity
-    guid: 50a697232068814418d8009ae438c83d
-  - enabled: 1
-    path: Assets/Scenes/CharacterSelect.unity
-    guid: f7337cb46863e2144ab508da28ea165e
-  - enabled: 1
-    path: Assets/Scenes/MapSelect.unity
-    guid: 61436fa77e9408645abf56bdc411e039
-  - enabled: 1
-    path: Assets/Scenes/ProtoLevel.unity
-    guid: 89995a11e35f1374aa040924b7ac935d
+    path: Assets/Scenes/DifficultySelect.unity
+    guid: 29e722cbe1c77cf4ba62087ab34a8fe2
   - enabled: 1
     path: Assets/Scenes/EndGameScene.unity
     guid: 9fc09dbf66f8b8f47ac64b926c87f5f8
   - enabled: 1
     path: Assets/Scenes/Level1.unity
     guid: 8191e3f3e04cb8e4aacea33faccc0aaa
+  - enabled: 1
+    path: Assets/Scenes/Level2WIP.unity
+    guid: f33cc70abcf393c4e8c1f1b22438fdfb
+  - enabled: 1
+    path: Assets/Scenes/MapSelect.unity
+    guid: 61436fa77e9408645abf56bdc411e039
+  - enabled: 1
+    path: Assets/Scenes/TitleScreen.unity
+    guid: 50a697232068814418d8009ae438c83d
   m_configObjects: {}
