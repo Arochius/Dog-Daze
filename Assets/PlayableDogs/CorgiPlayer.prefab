@@ -222,7 +222,7 @@ ParticleSystem:
       serializedVersion: 2
       minMaxState: 0
       minColor: {r: 1, g: 1, b: 1, a: 1}
-      maxColor: {r: 0.9622642, g: 0.8283668, b: 0, a: 0.57254905}
+      maxColor: {r: 0.9622642, g: 0.8283668, b: 0, a: 0.5882353}
       maxGradient:
         serializedVersion: 2
         key0: {r: 1, g: 1, b: 1, a: 1}
@@ -284,7 +284,7 @@ ParticleSystem:
     startSize:
       serializedVersion: 2
       minMaxState: 0
-      scalar: 0.04
+      scalar: 0.03
       minScalar: 1
       maxCurve:
         serializedVersion: 2
@@ -865,7 +865,7 @@ ParticleSystem:
     rateOverTime:
       serializedVersion: 2
       minMaxState: 0
-      scalar: 100
+      scalar: 500
       minScalar: 10
       maxCurve:
         serializedVersion: 2
@@ -4820,6 +4820,7 @@ MonoBehaviour:
   m_AnimSpeedMultiplier: 1
   m_GroundCheckDistance: 0.3
   pissStream: {fileID: 1847981804922691675}
+  cooldown: 15
 --- !u!114 &3910182761103241755
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -4832,8 +4833,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: f2f7719def984e843a50d871e6f889b2, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  speed: 6
-  jumpSpeed: 8
+  startSpeed: 10
+  jumpSpeed: 6
   gravity: 20
   dog: {fileID: 0}
 --- !u!143 &3910182761103241756

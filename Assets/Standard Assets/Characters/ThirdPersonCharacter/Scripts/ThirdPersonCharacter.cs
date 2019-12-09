@@ -31,9 +31,11 @@ namespace UnityStandardAssets.Characters.ThirdPerson
 		CapsuleCollider m_Capsule;
 		bool m_Crouching;
 
+        public int cooldown;
+
         public static bool isPissing;
         public static int pissCounter;
-        static bool canPiss;
+        public static bool canPiss;
 
         void Start()
 		{
@@ -277,7 +279,7 @@ namespace UnityStandardAssets.Characters.ThirdPerson
         IEnumerator pissCooldown()
         {
             canPiss = false;
-            yield return new WaitForSeconds(15);
+            yield return new WaitForSeconds(cooldown);
             canPiss = true;
         }
 	}

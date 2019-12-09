@@ -8,6 +8,8 @@ public class changeScene : MonoBehaviour
 {
     public static string selectedDog;
     public static string selectedMap;
+    public static string difficulty;
+
     GameObject[] doggos;
 
     private void Start()
@@ -18,6 +20,13 @@ public class changeScene : MonoBehaviour
     public void characterScene()
     {
         SceneManager.LoadScene("CharacterSelect");
+    }
+
+    public void mapScene(Button button)
+    {
+        difficulty = button.name;
+        print(difficulty);
+        SceneManager.LoadScene("MapSelect");
     }
 
     public void titleScene()
@@ -36,6 +45,8 @@ public class changeScene : MonoBehaviour
     {
         Application.Quit();
     }
+
+   
 
     public void protomapScene()
     {
