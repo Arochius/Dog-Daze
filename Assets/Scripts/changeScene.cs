@@ -54,4 +54,10 @@ public class changeScene : MonoBehaviour
         selectedMap = "Level1";
         SceneManager.LoadScene(selectedMap);
     }
+    public void protomapScene2()
+    {
+        selectedDog = dogSelect.selected;
+        selectedMap = "Level2   ";
+        SceneManager.LoadScene(selectedMap);
+    }
 }

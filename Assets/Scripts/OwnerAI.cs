@@ -6,8 +6,10 @@ public class OwnerAI : MonoBehaviour
 {
     public Transform[] targets; // list of potential targets         targets[0] = GameObject.FindGameObjectWithTag("Player").transform;
     private Transform target = null;
-    public float chaseSpeed = 5;
+    private float chaseSpeed = 0f;
     public float wanderingSpeed = 2f;
+
+    
 
     NavMeshAgent nav;
     Animator anim;
@@ -32,6 +34,17 @@ public class OwnerAI : MonoBehaviour
     // initialization
     void Start()
     {
+        if (changeScene.difficulty == "easy")
+        {
+            chaseSpeed = 3.4f;
+        } else if (changeScene.difficulty == "medium")
+        {
+            chaseSpeed = 5.2f;
+        } else
+        {
+            chaseSpeed = 6f;
+        }
+        
         Random.seed = (int)System.DateTime.Now.Ticks;
         nav = gameObject.GetComponent<NavMeshAgent>();
         anim = gameObject.GetComponent<Animator>();
@@ -42,6 +55,7 @@ public class OwnerAI : MonoBehaviour
     // try to find a target. if no target is found, wander. if a target is found, chase it.
     void FixedUpdate()
     {
+        
             if (!Targeting())
                 Wandering();
             if (target && !state.Equals("chasing"))
