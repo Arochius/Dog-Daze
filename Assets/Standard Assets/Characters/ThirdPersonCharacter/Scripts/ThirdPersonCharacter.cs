@@ -1,4 +1,5 @@
 using UnityEngine;
+using System.Collections;
 
 namespace UnityStandardAssets.Characters.ThirdPerson
 {
@@ -32,7 +33,7 @@ namespace UnityStandardAssets.Characters.ThirdPerson
 
         public static bool isPissing;
         public static int pissCounter;
-
+        bool canPiss;
 
         void Start()
 		{
@@ -49,6 +50,8 @@ namespace UnityStandardAssets.Characters.ThirdPerson
             m_Animator.enabled = true;
             isPissing = false;
             pissCounter = 0;
+
+            canPiss = true;
 		}
 
 
@@ -80,7 +83,7 @@ namespace UnityStandardAssets.Characters.ThirdPerson
 			ScaleCapsuleForCrouching(false);
 			PreventStandingInLowHeadroom();
 
-            if (piss && !isPissing)
+            if (piss && !isPissing &&canPiss)
                 StartPissing();
             else
             {
@@ -261,7 +264,14 @@ namespace UnityStandardAssets.Characters.ThirdPerson
         {
             isPissing = false;
             pissCounter++;
+            StartCoroutine("pissCooldown");
         }
 
+        IEnumerator pissCooldown()
+        {
+            canPiss = false;
+            yield return new WaitForSeconds(15);
+            canPiss = true;
+        }
 	}
 }
