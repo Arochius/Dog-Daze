@@ -25,10 +25,11 @@ public class Score : MonoBehaviour
     void Update()
     {
         score = ThirdPersonCharacter.pissCounter;
-        scoreText.text = "Score: " + score;
+        scoreText.text = "Score: " + score + " / " + scoreToWin;
         if (score >= scoreToWin)
         {
             didWin = true;
+            score = 0;
             SceneManager.LoadScene("EndGameScene");
         }
     }

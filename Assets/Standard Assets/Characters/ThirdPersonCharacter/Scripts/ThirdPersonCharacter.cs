@@ -31,9 +31,11 @@ namespace UnityStandardAssets.Characters.ThirdPerson
 		CapsuleCollider m_Capsule;
 		bool m_Crouching;
 
+        public int cooldown;
+
         public static bool isPissing;
         public static int pissCounter;
-        static bool canPiss;
+        public static bool canPiss;
 
         void Start()
 		{
@@ -58,9 +60,10 @@ namespace UnityStandardAssets.Characters.ThirdPerson
 		public void Move(Vector3 move, bool crouch, bool jump, bool piss)
 		{
 
-			// convert the world relative moveInput vector into a local-relative
-			// turn amount and forward amount required to head in the desired
-			// direction.
+            // convert the world relative moveInput vector into a local-relative
+            // turn amount and forward amount required to head in the desired
+            // direction.
+            if (!m_IsGrounded) piss = false;
 			if (move.magnitude > 1f) move.Normalize();
 			move = transform.InverseTransformDirection(move);
 			CheckGroundStatus();
@@ -276,7 +279,7 @@ namespace UnityStandardAssets.Characters.ThirdPerson
         IEnumerator pissCooldown()
         {
             canPiss = false;
-            yield return new WaitForSeconds(15);
+            yield return new WaitForSeconds(cooldown);
             canPiss = true;
         }
 	}
