@@ -33,7 +33,7 @@ namespace UnityStandardAssets.Characters.ThirdPerson
 
         public static bool isPissing;
         public static int pissCounter;
-        bool canPiss;
+        static bool canPiss;
 
         void Start()
 		{
