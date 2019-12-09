@@ -23,7 +23,7 @@ public class characterController : MonoBehaviour
 
         }
 
-        if (controller.transform.position.y <= -4)
+        if (controller.transform.position.y <= -40)
         {
             SceneManager.LoadScene("EndGameScene");
         }
